@@ -11,7 +11,6 @@ import org.json.JSONObject;
 import static com.demo.videoplay.Constants.EVENT_JOIN;
 import static com.demo.videoplay.Constants.EVENT_ROOM_FULL;
 import static com.demo.videoplay.Constants.ROOM_ID;
-import static com.demo.videoplay.Constants.YT_VIDEO_ID;
 
 public class SocketEventEmitter {
     String TAG = SocketEventListener.class.getSimpleName();
@@ -66,7 +65,7 @@ public class SocketEventEmitter {
                 new Thread(new Task(key)).start();
                 Thread.sleep(2000);
                 JSONObject data = new JSONObject();
-                data.put("YT_VIDEO_ID", YT_VIDEO_ID);
+                data.put("yt_video_id", "");
                 data.put("roomId", ROOM_ID);
 
                 mSocket.emit(Constants.EVENT_SET_CURRENT_VIDEO, data);// Start play You tube music
@@ -95,7 +94,7 @@ public class SocketEventEmitter {
             Log.i(TAG, "EVENT: " + Constants.EVENT_PLAY_VIDEO);
             try {
                 JSONObject info = (JSONObject) args[0];
-                String v_id = info.getString("YT_VIDEO_ID");
+                String v_id = info.getString("yt_video_id");
                 mVideoUrl = v_id;
                 boolean roomCreator = info.getBoolean("isRoomCreator");
 
