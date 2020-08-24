@@ -55,13 +55,6 @@ public class SocketEventEmitter {
         private Emitter.Listener onDisconnected = args -> {
             Log.i(TAG, "EVENT:" + "DisConnected");
 
-            String str = (String) args[0];
-            try {
-                System.out.println(str);
-            } catch (Exception exp) {
-                exp.printStackTrace();
-            }
-
         };
 
         private Emitter.Listener roomCreated = args -> {
