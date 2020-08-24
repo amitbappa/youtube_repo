@@ -18,5 +18,5 @@ public class Constants {
 
     public static  final String EVENT_PLAY_VIDEO = "play_video";
     public static  final String EVENT_JOIN = "join";
-    public static  final  String ROOM_ID="amit";
+    public static  final  String ROOM_ID="synccapp";
 }
