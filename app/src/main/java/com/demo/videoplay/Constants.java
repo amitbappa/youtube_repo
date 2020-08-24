@@ -2,8 +2,6 @@ package com.demo.videoplay;
 
 public class Constants {
     public static final String SERVER_URL = "https://a3eed115f800.ngrok.io";
-    public static final String YT_VIDEO_ID="F5UPc8dya-M";
-
 
     public static  final String EVENT_STREAM_STARTED = "STREAM_STARTED";
     public static  final String EVENT_SOCKET_DISCONNECTED= "SOCKET_DISCONNECTED";
