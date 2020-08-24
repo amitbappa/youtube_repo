@@ -34,8 +34,8 @@ public class MainActivity   extends YouTubeBaseActivity implements YouTubePlayer
     private void initView(){
         setContentView(R.layout.yt_video);
         joinRoomBtn= (Button)findViewById(R.id.join_room_btn);
+        joinRoomBtn.setEnabled(true);
         joinRoomBtn.setOnClickListener(this);
-        mYTApiKey = getString(R.string.key_to);
         youTubeView = (YouTubePlayerView) findViewById(R.id.youtube_view);
 
     }
@@ -106,7 +106,7 @@ public class MainActivity   extends YouTubeBaseActivity implements YouTubePlayer
         switch (view.getId()){
             case R.id.join_room_btn:
                 socketEventEmitter =new SocketEventEmitter(this);
-
+                joinRoomBtn.setEnabled(false);
                 break;
         }
 
